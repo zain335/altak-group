@@ -47,12 +47,23 @@ export function LogoMarquee() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-12 border-y border-primary/20 overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative py-12 border-y border-primary/20 overflow-hidden"
+    >
+      {/* Ambient Background Effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-[120px] animate-pulse delay-1000" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]" />
+      </div>
+
       {/* Section Label */}
+
       <div className="container mx-auto px-6 mb-8">
-        <div className="font-mono text-primary text-xs flex items-center gap-2">
+        <div className="font-mono text-primary text-sm flex items-center justify-center gap-2">
           <span className="animate-pulse">▸</span>
-          <span className="opacity-70">~/tech/stack</span>
+          <span className="opacity-70 tracking-widest">~/tech/stack</span>
         </div>
       </div>
 
@@ -77,7 +88,10 @@ export function LogoMarquee() {
         </div>
 
         {/* Duplicate set for seamless loop */}
-        <div className="flex animate-marquee gap-16 items-center shrink-0" aria-hidden="true">
+        <div
+          className="flex animate-marquee gap-16 items-center shrink-0"
+          aria-hidden="true"
+        >
           {logos.map((logo, index) => (
             <div
               key={`logo-2-${logo.name}-${index}`}
@@ -96,7 +110,10 @@ export function LogoMarquee() {
         </div>
 
         {/* Third set for extra seamlessness */}
-        <div className="flex animate-marquee gap-16 items-center shrink-0" aria-hidden="true">
+        <div
+          className="flex animate-marquee gap-16 items-center shrink-0"
+          aria-hidden="true"
+        >
           {logos.map((logo, index) => (
             <div
               key={`logo-3-${logo.name}-${index}`}

@@ -5,32 +5,10 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="relative py-16 border-t border-primary/20">
+    <footer className="relative py-8 border-t border-primary/20">
       <div className="container mx-auto px-6">
-        {/* CTA Section */}
-        <div className="text-center mb-12">
-          <div className="font-mono text-primary text-sm mb-4 flex items-center justify-center gap-2">
-            <span className="animate-pulse">▸</span>
-            <span className="opacity-70">~/contact</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Build Something Amazing?
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mb-8 font-mono">
-            Let's discuss your next project. We're always looking for new challenges.
-          </p>
-          <div className="flex items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="font-mono text-base px-8 py-6 bg-primary hover:bg-primary/90 shadow-[0_0_10px_rgba(0,255,200,0.2)] hover:shadow-[0_0_15px_rgba(0,255,200,0.3)] transition-all"
-            >
-              Get In Touch
-            </Button>
-          </div>
-        </div>
-
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-primary/10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 relative">
@@ -48,7 +26,8 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-xs text-muted-foreground font-mono">
-            &copy; {new Date().getFullYear()} Altak Group. Building the future of Web3.
+            &copy; {new Date().getFullYear()} Altak Group. Building the future
+            of Web3.
           </p>
 
           {/* Social Links */}

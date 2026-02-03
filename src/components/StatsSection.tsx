@@ -59,7 +59,17 @@ export function StatsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-24 border-t border-primary/20">
+    <section
+      ref={sectionRef}
+      className="relative py-24 border-t border-primary/20"
+    >
+      {/* Ambient Background Effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-[120px] animate-pulse delay-1000" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]" />
+      </div>
+      
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-14 text-center">
@@ -85,9 +95,7 @@ export function StatsSection() {
               <div className="text-lg font-semibold text-foreground mb-1">
                 {label}
               </div>
-              <div className="text-sm text-muted-foreground">
-                {description}
-              </div>
+              <div className="text-sm text-muted-foreground">{description}</div>
             </div>
           ))}
         </div>
