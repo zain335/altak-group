@@ -39,7 +39,7 @@ const projects = [
     tags: ["Launchpad", "Leaderboards", "Social", "Rewards"],
     icon: Rocket,
     gradient: "from-purple-500/20 to-red-500/20",
-    image: "/cookingcity.png",
+    image: "/cooking.png",
 
   },
   {
