@@ -38,7 +38,9 @@ const projects = [
       "A social hub with on-chain leaderboards that reward diamond-hand holders and creators. Building a community-driven ecosystem where engagement and holding are rewarded transparently on-chain.",
     tags: ["Launchpad", "Leaderboards", "Social", "Rewards"],
     icon: Rocket,
-    gradient: "from-orange-500/20 to-red-500/20",
+    gradient: "from-purple-500/20 to-red-500/20",
+    image: "/cookingcity.png",
+
   },
   {
     id: 3,
@@ -50,6 +52,7 @@ const projects = [
     tags: ["TradingView", "Jupiter", "PineScript", "AI Signals"],
     icon: LineChart,
     gradient: "from-green-500/20 to-emerald-500/20",
+    image: "/alchemyEx.png",
   },
   {
     id: 4,
@@ -61,6 +64,7 @@ const projects = [
     tags: ["Plasmic", "Telegram", "Trading", "DEX"],
     icon: Shield,
     gradient: "from-red-500/20 to-pink-500/20",
+    image: "/plasmicBot.png",
   },
   {
     id: 5,
@@ -72,6 +76,7 @@ const projects = [
     tags: ["iOS", "Solana", "Wellness", "Gamification"],
     icon: Smartphone,
     gradient: "from-blue-500/20 to-indigo-500/20",
+    image: "/pawse.png",
   },
   {
     id: 6,
@@ -83,6 +88,7 @@ const projects = [
     tags: ["GPT-4o", "Pinterest API", "Vision AI", "E-commerce"],
     icon: Image,
     gradient: "from-pink-500/20 to-rose-500/20",
+    image: "/wallgen.png",
   },
   {
     id: 7,
@@ -94,6 +100,7 @@ const projects = [
     tags: ["Voice AI", "TTS", "Multilingual", "OpenAI"],
     icon: Mic,
     gradient: "from-violet-500/20 to-purple-500/20",
+    image: "/voicegpt.png",
   },
 ];
 
