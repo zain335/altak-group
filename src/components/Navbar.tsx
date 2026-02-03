@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#tools", label: "Tools" },
   { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -36,10 +37,16 @@ export function Navbar() {
     e.preventDefault();
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+
+    // Close mobile menu first
     setIsMobileMenuOpen(false);
+
+    // Delay scroll to allow menu close animation to complete
+    setTimeout(() => {
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
   };
 
   const scrollToTop = () => {
@@ -133,12 +140,17 @@ export function Navbar() {
                 </a>
 
                 {/* Contact Button */}
-                <Button
-                  size="sm"
-                  className="ml-2 font-mono text-xs bg-primary hover:bg-primary/90 shadow-[0_0_10px_rgba(0,255,200,0.2)] hover:shadow-[0_0_15px_rgba(0,255,200,0.3)] transition-all"
+                <a
+                  href="#contact"
+                  onClick={(e) => handleSmoothScroll(e, "#contact")}
                 >
-                  Contact Us
-                </Button>
+                  <Button
+                    size="sm"
+                    className="ml-2 font-mono text-xs bg-primary hover:bg-primary/90 shadow-[0_0_10px_rgba(0,255,200,0.2)] hover:shadow-[0_0_15px_rgba(0,255,200,0.3)] transition-all"
+                  >
+                    Contact Us
+                  </Button>
+                </a>
               </div>
 
               {/* Mobile Menu Button */}
@@ -226,11 +238,17 @@ export function Navbar() {
                     </div>
 
                     {/* Contact Button */}
-                    <Button
-                      className="w-full font-mono text-sm bg-primary hover:bg-primary/90 shadow-[0_0_10px_rgba(0,255,200,0.2)] hover:shadow-[0_0_15px_rgba(0,255,200,0.3)] transition-all"
+                    <a
+                      href="#contact"
+                      onClick={(e) => handleSmoothScroll(e, "#contact")}
+                      className="block"
                     >
-                      Contact Us
-                    </Button>
+                      <Button
+                        className="w-full font-mono text-sm bg-primary hover:bg-primary/90 shadow-[0_0_10px_rgba(0,255,200,0.2)] hover:shadow-[0_0_15px_rgba(0,255,200,0.3)] transition-all"
+                      >
+                        Contact Us
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </motion.div>

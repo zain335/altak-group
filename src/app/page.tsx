@@ -6,6 +6,7 @@ import { StatsSection } from "@/components/StatsSection";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { GetInTouch } from "@/components/GetInTouch";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <OtherTools />
       <StatsSection />
       <FAQ />
+      <GetInTouch />
       <Footer />
     </div>
   );
