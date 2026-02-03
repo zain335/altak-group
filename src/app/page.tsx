@@ -5,10 +5,12 @@ import { OtherTools } from "@/components/OtherTools";
 import { StatsSection } from "@/components/StatsSection";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen dark">
+      <Navbar />
       <CoreScroll />
       <ProjectShowcase />
       <LogoMarquee />
