@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -32,8 +33,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-primary/10">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center">
-              <span className="text-primary font-bold text-sm">A</span>
+            <div className="w-8 h-8 relative">
+              <Image
+                src="/logo.png"
+                alt="Altak Group"
+                fill
+                className="object-contain"
+              />
             </div>
             <span className="text-sm font-medium text-muted-foreground">
               Altak<span className="text-primary">Group</span>
