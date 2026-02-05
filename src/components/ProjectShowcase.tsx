@@ -140,7 +140,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "Trojan Bot",
+    title: "Shred Bot",
     subtitle: "AVAX Trading Companion for Shred",
     highlight: "Sub-second Execution",
     description:
